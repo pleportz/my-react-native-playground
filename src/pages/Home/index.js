@@ -8,7 +8,6 @@ class Home extends PureComponent {
   static navigationOptions = {
     title: 'Home',
   };
-  props: PropsType;
 
   _goToInfos = () => {
     this.props.navigation.navigate('infos');
@@ -34,10 +33,6 @@ class Home extends PureComponent {
     );
   }
 }
-
-type PropsType = {
-  navigation: any,
-};
 
 const styles = StyleSheet.create({
   container: {

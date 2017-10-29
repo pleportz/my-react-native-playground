@@ -15,15 +15,6 @@ class Button extends PureComponent {
   }
 }
 
-Button.propTypes = {
-  children: PropTypes.string.isRequired,
-  onPress: PropTypes.func,
-};
-
-Button.defaultProps = {
-  onPress: () => {},
-};
-
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
