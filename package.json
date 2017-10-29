@@ -8,8 +8,10 @@
     "test:lint": "eslint . --quiet"
   },
   "dependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
     "react": "16.0.0-beta.5",
-    "react-native": "0.49.5"
+    "react-native": "0.49.5",
+    "react-navigation": "^1.0.0-beta.15"
   },
   "devDependencies": {
     "babel-core": "6.23.1",
