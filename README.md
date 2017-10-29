@@ -1,2 +1,2 @@
-# how-many
+# How Many
 An app for counting stuff
