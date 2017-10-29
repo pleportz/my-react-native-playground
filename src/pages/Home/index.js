@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { Page, Button } from 'HowMany/src/components';
@@ -26,7 +26,7 @@ type PropsType = {
   navigation: any,
 };
 
-class Home extends Component {
+class Home extends PureComponent {
   static navigationOptions = {
     title: 'Home',
   };
