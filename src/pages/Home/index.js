@@ -4,28 +4,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Page, Button } from 'HowMany/src/components';
 import appStyle from 'HowMany/src/appStyle';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  welcome: {
-    fontSize: appStyle.font.size.huge,
-    textAlign: 'center',
-    margin: appStyle.grid.x1,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: appStyle.colors.darkGray,
-    marginBottom: appStyle.grid.x1,
-  },
-});
-
-type PropsType = {
-  navigation: any,
-};
-
 class Home extends PureComponent {
   static navigationOptions = {
     title: 'Home',
@@ -56,5 +34,27 @@ class Home extends PureComponent {
     );
   }
 }
+
+type PropsType = {
+  navigation: any,
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  welcome: {
+    fontSize: appStyle.font.size.huge,
+    textAlign: 'center',
+    margin: appStyle.grid.x1,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: appStyle.colors.darkGray,
+    marginBottom: appStyle.grid.x1,
+  },
+});
 
 export default Home;
