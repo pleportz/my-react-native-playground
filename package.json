@@ -7,6 +7,7 @@
     "start:ios": "react-native run-ios --simulator \"iPhone 6\"",
     "test": "npm run test:unit",
     "test:unit": "jest",
+    "test:lint": "eslint . --quiet",
     "flow": "flow",
     "flow:stop": "flow stop"
   },
@@ -18,12 +19,21 @@
   },
   "devDependencies": {
     "babel-core": "6.23.1",
-    "babel-eslint": "7.1.1",
+    "babel-eslint": "^7.2.2",
     "babel-jest": "21.2.0",
     "babel-preset-react-native": "1.9.1",
     "flow-bin": "0.53.0",
     "jest": "21.2.1",
-    "react-test-renderer": "16.0.0-beta.5"
+    "react-test-renderer": "16.0.0-beta.5",
+    "eslint": "^3.19.0",
+    "eslint-config-prettier": "^1.7.0",
+    "eslint-config-react-app": "^0.6.2",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-prettier": "^2.0.1",
+    "eslint-plugin-react": "^6.10.0",
+    "prettier": "^1.2.2"
   },
   "jest": {
     "preset": "react-native",

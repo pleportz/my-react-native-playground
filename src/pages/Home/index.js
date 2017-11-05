@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View } from 'react-native';
-import appStyle from 'HowMany/src/appStyle';
 import { Text } from '../../components/common';
 import { PlusButton } from '../../components/PlusButton';
 
