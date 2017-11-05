@@ -16,6 +16,18 @@
 ; Ignore polyfills
 .*/Libraries/polyfills/.*
 
+; Ignore dependency errors
+
+.*/node_modules/babel-plugin-transform-react-remove-prop-types
+.*/node_modules/react-static-container
+.*/node_modules/react-native/local-cli/**/*.flow
+.*/node_modules/metro-bundler/**/*.flow
+.*/node_modules/react-navigation
+.*/node_modules/react-native-linear-gradient
+.*/node_modules/react-native-tab-view
+.*/node_modules/react-native-sortable-listview
+.*/node_modules/react-motion
+
 [include]
 
 [libs]

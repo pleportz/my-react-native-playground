@@ -3,7 +3,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import appStyle from 'HowMany/src/appStyle';
 
-const Page = props => (
+const Page = (props: Props): any => (
   <View
     style={[
       styles.page,
@@ -17,6 +17,13 @@ const Page = props => (
     {props.children}
   </View>
 );
+
+type Props = {
+  noNavBar?: boolean,
+  noMargin?: boolean,
+  backgroundColor: string,
+  children: any,
+};
 
 const styles = StyleSheet.create({
   page: {

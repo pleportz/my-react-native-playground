@@ -3,17 +3,22 @@ import React, { PureComponent, PropTypes } from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 import appStyle from 'HowMany/src/appStyle';
 
-class Button extends PureComponent {
+class Button extends PureComponent<Props, void> {
   render() {
     return (
       <TouchableOpacity onPress={this.props.onPress} style={styles.container}>
         <View style={styles.button}>
-          <Text style={[styles.text]}>{this.props.children.toUpperCase()}</Text>
+          <Text style={[styles.text]}>{this.props.text}</Text>
         </View>
       </TouchableOpacity>
     );
   }
 }
+
+type Props = {
+  text: string,
+  onPress: Function,
+};
 
 const styles = StyleSheet.create({
   container: {
