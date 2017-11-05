@@ -1,14 +1,16 @@
 import { StackNavigator } from 'react-navigation';
+import * as Pages from './pages';
 
-import * as Pages from 'HowMany/src/pages';
-
-export default StackNavigator({
-  home: {
-    screen: Pages.Home,
+export default StackNavigator(
+  {
+    home: {
+      screen: Pages.Home,
+      navigationOptions: {
+        title: 'Home',
+      },
+    },
   },
-  infos: {
-    screen: Pages.Infos,
-  },
-}, {
-  initialRouteName: 'home',
-});
+  {
+    initialRouteName: 'home',
+  }
+);
