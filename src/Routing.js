@@ -7,6 +7,9 @@ export default StackNavigator(
       screen: Pages.Home,
       navigationOptions: {
         title: 'HOW MANY',
+        headerTitleStyle: {
+          fontFamily: 'OpenSans-Regular',
+        },
       },
     },
   },
