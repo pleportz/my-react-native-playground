@@ -6,7 +6,7 @@ export default StackNavigator(
     home: {
       screen: Pages.Home,
       navigationOptions: {
-        title: 'Home',
+        title: 'HOW MANY',
       },
     },
   },
