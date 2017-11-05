@@ -1,5 +1,5 @@
 // @flow
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 import appStyle from 'HowMany/src/appStyle';
 
@@ -8,7 +8,7 @@ class Button extends PureComponent<Props, void> {
     return (
       <TouchableOpacity onPress={this.props.onPress} style={styles.container}>
         <View style={styles.button}>
-          <Text style={[styles.text]}>{this.props.text}</Text>
+          <Text style={styles.text}>{this.props.text}</Text>
         </View>
       </TouchableOpacity>
     );
