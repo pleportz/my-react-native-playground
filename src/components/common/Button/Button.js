@@ -6,7 +6,7 @@ import appStyle from 'HowMany/src/appStyle';
 class Button extends PureComponent<Props, void> {
   render() {
     return (
-      <TouchableOpacity onPress={this.props.onPress} style={styles.container}>
+      <TouchableOpacity onPress={this.props.onPress} style={styles.container} activeOpacity={0.6}>
         <View style={styles.button}>
           <Text style={styles.text}>{this.props.text}</Text>
         </View>
