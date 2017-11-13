@@ -25,7 +25,7 @@ class Button extends PureComponent<Props, void> {
 
 type Props = {
   fontSize?: number,
-  size?: number,
+  size: number,
   onPress: Function,
 };
 
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   plusButton: {
     justifyContent: 'center',
     backgroundColor: '#ffffff80',
-    borderWidth: 2,
+    borderWidth: 6,
   },
   text: {
     textAlign: 'center',

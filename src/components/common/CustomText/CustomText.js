@@ -10,7 +10,7 @@ class CustomText extends PureComponent<Props, void> {
 
 type Props = {
   children: string,
-  style: any,
+  style?: any,
 };
 
 const styles = StyleSheet.create({
