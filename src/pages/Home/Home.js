@@ -4,9 +4,10 @@ import { StyleSheet, View, Modal } from 'react-native';
 import { Button, Text, TextInput } from '../../components/common';
 import { PlusButton } from '../../components/PlusButton';
 
-class Home extends PureComponent<void, State> {
+class Home extends PureComponent<Props, State> {
   state = {
     modalVisible: false,
+    countTitle: undefined,
   };
 
   setModalVisible(visible: boolean) {
@@ -50,8 +51,13 @@ class Home extends PureComponent<void, State> {
   }
 }
 
+type Props = {
+  navigation: any,
+};
+
 type State = {
   modalVisible: boolean,
+  countTitle?: ?string,
 };
 
 const styles = StyleSheet.create({

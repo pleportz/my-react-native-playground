@@ -20,6 +20,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  text: {
+    textAlign: 'center',
+    fontSize: 18,
+  },
 });
 
 export default Counter;
