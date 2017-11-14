@@ -7,13 +7,23 @@ export default StackNavigator(
       screen: Pages.Home,
       navigationOptions: {
         title: 'HOW MANY',
-        headerTitleStyle: {
-          fontFamily: 'OpenSans-Regular',
-        },
       },
+    },
+    counter: {
+      screen: Pages.Counter,
+      navigationOptions: ({ navigation }) => ({
+        title: navigation.state.params.countTitle,
+      }),
     },
   },
   {
     initialRouteName: 'home',
+    navigationOptions: {
+      headerTitleStyle: {
+        fontFamily: 'OpenSans-Regular',
+      },
+      headerTitleAllowFontScaling: false,
+      headerBackTitle: null,
+    },
   }
 );

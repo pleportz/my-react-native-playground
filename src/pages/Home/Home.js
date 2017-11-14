@@ -12,9 +12,15 @@ class Home extends PureComponent<void, State> {
   setModalVisible(visible: boolean) {
     this.setState({ modalVisible: visible });
   }
+  setCountTitle = (countTitle: string) => {
+    this.setState({ countTitle });
+  };
 
   openModal = () => this.setModalVisible(true);
-  confirmModal = () => this.setModalVisible(false);
+  confirmModal = () => {
+    this.setModalVisible(false);
+    this.props.navigation.navigate('counter', { countTitle: this.state.countTitle });
+  };
 
   render() {
     return (
@@ -22,7 +28,12 @@ class Home extends PureComponent<void, State> {
         <Modal animationType="fade" transparent={false} visible={this.state.modalVisible}>
           <View style={styles.modalContent}>
             <Text>What are we counting?</Text>
-            <TextInput placeholder="Lost pens, Hiccups..." autofocus />
+            <TextInput
+              placeholder="Lost pens, Hiccups..."
+              autofocus
+              value={this.state.countTitle}
+              onChangeText={this.setCountTitle}
+            />
             <Button text="Confirm" onPress={this.confirmModal} />
           </View>
         </Modal>
