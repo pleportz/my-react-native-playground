@@ -15,16 +15,15 @@
     "babel-preset-react-native-stage-0": "^1.0.1",
     "react": "16.0.0-beta.5",
     "react-native": "0.49.5",
-    "react-navigation": "^1.0.0-beta.15"
+    "react-navigation": "^1.0.0-beta.15",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-core": "6.23.1",
     "babel-eslint": "^7.2.2",
     "babel-jest": "21.2.0",
     "babel-preset-react-native": "1.9.1",
-    "flow-bin": "0.53.0",
-    "jest": "21.2.1",
-    "react-test-renderer": "16.0.0-beta.5",
     "eslint": "^3.19.0",
     "eslint-config-prettier": "^1.7.0",
     "eslint-config-react-app": "^0.6.2",
@@ -33,7 +32,10 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-prettier": "^2.0.1",
     "eslint-plugin-react": "^6.10.0",
-    "prettier": "^1.2.2"
+    "flow-bin": "0.53.0",
+    "jest": "21.2.1",
+    "prettier": "^1.2.2",
+    "react-test-renderer": "16.0.0-beta.5"
   },
   "jest": {
     "preset": "react-native",
@@ -42,6 +44,8 @@
     }
   },
   "rnpm": {
-    "assets": ["./assets/fonts/"]
+    "assets": [
+      "./assets/fonts/"
+    ]
   }
 }
