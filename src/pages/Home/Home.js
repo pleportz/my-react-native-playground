@@ -44,7 +44,6 @@ class Home extends PureComponent<Props, State> {
         <PlusButton fontSize={180} size={220} onPress={this.openModal} />
         <View style={styles.footerContainer}>
           <Text style={styles.text}>Wanna keep track of something?</Text>
-          <Text style={styles.text}> Count it with How Many</Text>
         </View>
       </View>
     );
