@@ -1,4 +1,5 @@
 const initialState = {
+  current: null,
   list: {},
 };
 
@@ -29,6 +30,13 @@ export default function(state = initialState, action) {
             count: state.list[name].count + 1,
           },
         },
+      };
+
+    case 'SET_CURRENT_COUNT':
+      name = action.payload.name;
+      return {
+        ...state,
+        current: name,
       };
 
     default:

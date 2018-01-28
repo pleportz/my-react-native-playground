@@ -1,5 +1,5 @@
 import reducer from './reducer';
-import { addCount, incrementByOne } from './actions';
+import { addCount, incrementByOne, setCurrentCount } from './actions';
 
 describe('Count reducer', () => {
   describe('ADD_COUNT', () => {
@@ -44,6 +44,39 @@ describe('Count reducer', () => {
           Beers: {
             name: 'Beers',
             count: 3,
+          },
+        },
+      };
+      expect(reducer(inputState, action)).toEqual(outputState);
+    });
+  });
+
+  describe('SET_CURRENT_COUNT', () => {
+    it('sets the current count', () => {
+      const action = setCurrentCount('Beers');
+      const inputState = {
+        current: 'Lost pens',
+        list: {
+          'Lost pens': {
+            name: 'Lost pens',
+            count: 1,
+          },
+          Beers: {
+            name: 'Beers',
+            count: 2,
+          },
+        },
+      };
+      const outputState = {
+        current: 'Beers',
+        list: {
+          'Lost pens': {
+            name: 'Lost pens',
+            count: 1,
+          },
+          Beers: {
+            name: 'Beers',
+            count: 2,
           },
         },
       };
