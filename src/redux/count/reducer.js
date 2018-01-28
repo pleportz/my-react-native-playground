@@ -3,19 +3,34 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
+  let name;
   switch (action.type) {
     case 'ADD_COUNT':
-      const name = action.payload.name;
+      name = action.payload.name;
       return {
         ...state,
         list: {
           ...state.list,
           [name]: {
             name,
-            count: 0,
+            count: 1,
           },
         },
       };
+
+    case 'INCREMENT_BY_ONE':
+      name = action.payload.name;
+      return {
+        ...state,
+        list: {
+          ...state.list,
+          [name]: {
+            ...state.list[name],
+            count: state.list[name].count + 1,
+          },
+        },
+      };
+
     default:
       return state;
   }
