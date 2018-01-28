@@ -20,6 +20,7 @@ class Home extends PureComponent<Props, State> {
   openModal = () => this.setModalVisible(true);
   confirmModal = () => {
     this.props.addCount(this.state.countTitle);
+    this.props.setCurrentCount(this.state.countTitle);
     this.setModalVisible(false);
     this.props.navigation.navigate('counter', { countTitle: this.state.countTitle });
   };

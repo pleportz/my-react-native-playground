@@ -3,11 +3,18 @@ import React, { PureComponent } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Text } from '../../components/common';
 
-class Counter extends PureComponent<void, void> {
+type Props = {
+  count: {
+    name: string,
+    count: number,
+  },
+};
+
+class Counter extends PureComponent<Props, void> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>WIP</Text>
+        <Text style={styles.text}>{this.props.count.name}</Text>
       </View>
     );
   }
