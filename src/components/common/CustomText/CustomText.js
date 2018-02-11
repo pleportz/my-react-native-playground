@@ -4,7 +4,12 @@ import { StyleSheet, Text } from 'react-native';
 
 class CustomText extends PureComponent<Props, void> {
   render() {
-    return <Text style={[styles.text, this.props.style]}>{this.props.children}</Text>;
+    const { style, children, ...otherProps } = this.props;
+    return (
+      <Text style={[styles.text, style]} {...otherProps}>
+        {children}
+      </Text>
+    );
   }
 }
 

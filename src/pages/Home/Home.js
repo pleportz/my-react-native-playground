@@ -41,7 +41,10 @@ class Home extends PureComponent<Props, State> {
           </View>
         </Modal>
         <View>
-          <Text style={[styles.text, styles.subtitle]}>Start counting!</Text>
+          <Text style={[styles.text, styles.subtitle, styles.subtitle1]}>START</Text>
+          <Text style={[styles.text, styles.subtitle, styles.subtitle2]}>START</Text>
+          <Text style={[styles.text, styles.subtitle, styles.subtitle3]}>START</Text>
+          <Text style={[styles.text, styles.subtitle, styles.subtitle4]}>START</Text>
         </View>
         <PlusButton fontSize={180} size={220} onPress={this.openModal} />
         <View style={styles.footerContainer}>
@@ -67,13 +70,34 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     justifyContent: 'space-around',
+    backgroundColor: 'white',
   },
   text: {
     textAlign: 'center',
     fontSize: 18,
   },
   subtitle: {
-    fontSize: 32,
+    position: 'absolute',
+    top: 0,
+    left: -70,
+    fontSize: 50,
+    color: '#FF69B4',
+    backgroundColor: 'transparent',
+    textShadowColor: 'black',
+    textShadowRadius: 1,
+    fontWeight: 'bold',
+  },
+  subtitle1: {
+    textShadowOffset: { width: -1, height: 0 },
+  },
+  subtitle2: {
+    textShadowOffset: { width: 1, height: 0 },
+  },
+  subtitle3: {
+    textShadowOffset: { width: 0, height: 1 },
+  },
+  subtitle4: {
+    textShadowOffset: { width: 0, height: -1 },
   },
   footerContainer: {
     marginBottom: 40,
