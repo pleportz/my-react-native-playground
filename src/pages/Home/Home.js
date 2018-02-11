@@ -45,6 +45,7 @@ class Home extends PureComponent<Props, State> {
           <Text style={[styles.text, styles.subtitle, styles.subtitle2]}>START</Text>
           <Text style={[styles.text, styles.subtitle, styles.subtitle3]}>START</Text>
           <Text style={[styles.text, styles.subtitle, styles.subtitle4]}>START</Text>
+          <Text style={[styles.text, styles.subtitle, styles.subtitle5]}>START</Text>
         </View>
         <PlusButton fontSize={180} size={220} onPress={this.openModal} />
         <View style={styles.footerContainer}>
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   subtitle1: {
-    textShadowOffset: { width: -1, height: 0 },
+    textShadowOffset: { width: -2, height: 0 },
   },
   subtitle2: {
     textShadowOffset: { width: 1, height: 0 },
@@ -97,7 +98,11 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 1 },
   },
   subtitle4: {
-    textShadowOffset: { width: 0, height: -1 },
+    textShadowOffset: { width: 0, height: -2 },
+  },
+  subtitle5: {
+    textShadowColor: 'white',
+    textShadowOffset: { width: -1, height: 0 },
   },
   footerContainer: {
     marginBottom: 40,
