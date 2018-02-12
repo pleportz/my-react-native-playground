@@ -41,11 +41,13 @@ class Home extends PureComponent<Props, State> {
           </View>
         </Modal>
         <View>
+          <Text style={[styles.text, styles.subtitle, styles.subtitle0]}>START</Text>
           <Text style={[styles.text, styles.subtitle, styles.subtitle1]}>START</Text>
           <Text style={[styles.text, styles.subtitle, styles.subtitle2]}>START</Text>
           <Text style={[styles.text, styles.subtitle, styles.subtitle3]}>START</Text>
           <Text style={[styles.text, styles.subtitle, styles.subtitle4]}>START</Text>
           <Text style={[styles.text, styles.subtitle, styles.subtitle5]}>START</Text>
+          <Text style={[styles.text, styles.subtitle, styles.subtitle6]}>START</Text>
         </View>
         <PlusButton fontSize={180} size={220} onPress={this.openModal} />
         <View style={styles.footerContainer}>
@@ -80,13 +82,17 @@ const styles = StyleSheet.create({
   subtitle: {
     position: 'absolute',
     top: 0,
-    left: -70,
-    fontSize: 50,
+    left: -105,
+    fontSize: 80,
     color: '#FF69B4',
     backgroundColor: 'transparent',
     textShadowColor: 'black',
     textShadowRadius: 1,
     fontWeight: 'bold',
+  },
+  subtitle0: {
+    top: 2,
+    left: -102,
   },
   subtitle1: {
     textShadowOffset: { width: -2, height: 0 },
@@ -103,6 +109,10 @@ const styles = StyleSheet.create({
   subtitle5: {
     textShadowColor: 'white',
     textShadowOffset: { width: -1, height: 0 },
+  },
+  subtitle6: {
+    textShadowColor: 'white',
+    textShadowOffset: { width: 0, height: -1 },
   },
   footerContainer: {
     marginBottom: 40,
